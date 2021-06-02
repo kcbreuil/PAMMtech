@@ -55,7 +55,6 @@
     $html .= '<div>';
     $html .= '<h2>Something to do today:</h2>';
 
-
     foreach($activities as $activity) {
 
         $html .= '<p><strong>Activity:</strong> ' . $activity->activity .  '</p>';
@@ -69,9 +68,11 @@
     }
 
   
-    $html .= '</h1>';
+    $html .= '</div>';
     
     return $html;
+
+    wp_insert_post($activity)
     
  }
  /* Stop Adding Functions Below this Line */
